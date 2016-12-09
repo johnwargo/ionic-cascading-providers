@@ -1,0 +1,6 @@
+{
+  "name": "provider-test",
+  "app_id": "com.microsoft.taco.provider-test",
+  "v2": true,
+  "typescript": true
+}
