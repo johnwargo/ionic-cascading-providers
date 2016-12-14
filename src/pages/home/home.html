@@ -9,7 +9,9 @@
 <ion-content padding>
   This application demonstrates the concept of switching data providers under the covers. The app exposes a single provider, but inside that provider, it can use any of a number of providers to provide data. 
   <br /><br />
+  <button ion-button (click)="sendTestOutput()" block>Output Text</button>
+  <br />
   <button ion-button (click)="setProvider1()" block>Data Provider #1</button>
   <button ion-button (click)="setProvider2()" block>Data Provider #2</button>  
-  <button ion-button (click)="sendTestOutput()" block>Output Text</button>
+  
 </ion-content>

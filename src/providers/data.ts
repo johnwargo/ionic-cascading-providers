@@ -12,8 +12,8 @@ export class Data {
     private data2: Data2
   ) {
     console.log('Data Provider: Initializing provider');
-    //Set a default provider
-    this.provider = Data1;
+    //Set the default provider
+    this.provider = this.data1;
   }
 
   public setProvider(provider: number) {
