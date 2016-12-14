@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 export class Data1 {
 
   constructor() {
-    console.log('Initializing Data1')
+    console.log('Initializing Data-1')
   }
 
   test() {

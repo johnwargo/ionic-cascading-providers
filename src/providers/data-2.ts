@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class Data2 {
 
- constructor() {
+  constructor() {
     console.log('Initializing Data-2')
   }
 

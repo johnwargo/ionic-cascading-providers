@@ -11,7 +11,7 @@ export class HomePage {
   constructor(
     public data: Data,
     public navCtrl: NavController,
-    public platform: Platform
+    public platform: Platform 
   ) { }
 
   ionViewDidLoad() {
@@ -22,11 +22,11 @@ export class HomePage {
   }
 
   setProvider1() {
-    this.data.setProvider1();
+    this.data.setProvider(1);
   }
 
   setProvider2() {
-    this.data.setProvider2();
+    this.data.setProvider(2);
   }
 
   sendTestOutput() {

@@ -4,23 +4,36 @@ import { Data2 } from './data-2';
 
 @Injectable()
 export class Data {
- 
+
   public provider: any;
 
-  constructor() {    
-    console.log('initializing provider (Data)');
+  constructor(
+    private data1: Data1,
+    private data2: Data2
+  ) {
+    console.log('Data Provider: Initializing provider');
     //Set a default provider
-    this.provider = Data1.prototype;      
+    this.provider = Data1;
   }
 
-  setProvider1() {
-    console.log('Switching to Data-1 provider');
-    this.provider = Data1.prototype;
-  }
-
-  setProvider2() {
-    this.provider = Data2.prototype;
-    console.log('Switching to Data-2 provider');
+  public setProvider(provider: number) {
+    console.log('Data Provider: Entering setProvider()');
+    //Validate input
+    if (provider < 3) {
+      //switch to the selected provider
+      switch (provider) {
+        case 1:
+          console.log('Data Provider: Setting provider Data1');
+          this.provider = this.data1;
+          break;
+        case 2:
+          console.log('Data Provider: Setting provider Data2');
+          this.provider = this.data2;
+          break;
+      }
+    } else {
+      console.warn('Data Provider: Invalid provider number');
+    }
   }
 
 }
